@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LEGION 35</title>
+    <style>
+        html, body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .app {
+            display: flex;
+            position: absolute;
+            width: 30em;
+            height: 30em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            color: white;
+            font-family: sans-serif;
+            font-size: 100px;
+            margin-top: -200px;
+        }
+
+        .n {
+            color: cyan;
+        }
+
+        .discord {
+            position: absolute;
+            background-color: #5b5bc8;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            transition: transform .2s;
+            cursor: pointer;
+            margin-left: -250px;
+        }
+
+        .discord:hover {
+            transform: scale(1.1);
+        }
+
+        .telegram {
+            position: absolute;
+            background-color: #5b5bc8;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            transition: transform .2s;
+            cursor: pointer;
+            margin-left: 250px;
+            width: 215px;
+            height: 73px;
+        }
+
+        .tg-img {
+            margin-top: -15px;
+            margin-left: -10px;
+        }
+
+        .telegram:hover {
+            transform: scale(1.1);
+        }
+
+        @media only screen and (max-width: 767px) {
+            .app {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .title {
+                font-size: 70px;
+            }
+
+            .discord {
+                margin-left: 0;
+            }
+
+            .telegram {
+                margin-left: 0;
+                margin-top: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+	<div class="app">
+		<p class="title">
+			LEGION<span class="n">35</span>
+		</p>
+
+		<button class="discord">
+			<img src="https://media.discordapp.net/attachments/1115974815275286650/1116144595382841444/19bc2ce6f2904254334fdbe6a0798dbb.png?width=375&height=127" width="200px">
+		</button>
+
+		<button class="telegram">
+			<img class="tg-img" src="https://media.discordapp.net/attachments/1115760296284409961/1116147764984819712/Telegram-removebg-preview.png?width=883&height=441" width="200px">
+		</button>
+	</div>
+	
+	<script>
+        const discord = document.querySelector(".discord");
+        const telegram = document.querySelector(".telegram");
+
+        discord.addEventListener("click", () => {
+            window.location = "https://discord.gg/GaJA4Ed4dP";
+        })
+
+        telegram.addEventListener("click", () => {
+            window.location = "https://t.me/legion35ru";
+        })
+    </script>
+</body>
+
+</html>
